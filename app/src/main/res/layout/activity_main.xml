@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="선택을 시작하겠습니까?"
+        android:textColor="#C3C3C3"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt1"
+        android:layout_alignLeft="@id/txt1"
+        android:layout_marginTop="27dp"
+        android:text="시작함"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <Switch
+        android:id="@+id/mainSwitch"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/txt2"
+        android:minHeight="48dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아하는 안드로이드 버전은?"
+        android:textColor="#C3C3C3"
+        android:id="@+id/txt3"
+        android:layout_below="@id/txt2"
+        android:layout_alignLeft="@id/txt2"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioMain"
+        android:layout_below="@id/txt3"
+        android:layout_alignLeft="@id/txt1">
+
+        <RadioButton
+            android:id="@+id/radio_oreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="오레오(8.0)"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파이(9.0)"
+            android:id="@+id/radio_pie"
+            android:layout_below="@id/radio_oreo"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q(10.0)"
+            android:id="@+id/radio_q"
+            android:layout_below="@id/radio_pie"
+            android:visibility="gone"/>
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/android_oreo"
+        android:layout_alignLeft="@id/txt1"
+        android:layout_below="@id/radioMain"
+        android:id="@+id/mainImg"
+        android:layout_marginTop="27dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainImg"
+        android:layout_alignLeft="@id/txt1"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#3FE864"
+        android:id="@+id/resetBtn"
+        android:text="초기값으로"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
